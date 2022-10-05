@@ -117,15 +117,20 @@ texture = ExtResource("4")
 
 [node name="RoamingTower" parent="Node2D" instance=ExtResource("2")]
 modulate = Color(0.388235, 0.662745, 0.67451, 1)
-position = Vector2(216.856, 485.46)
+position = Vector2(633, 374)
 scale = Vector2(-0.22, 0.22)
+
+[node name="RoamingTower2" parent="Node2D" instance=ExtResource("2")]
+modulate = Color(1, 0.364706, 0.513726, 1)
+position = Vector2(334, 481)
+scale = Vector2(-0.535999, 0.533481)
 
 [node name="Tree" parent="Node2D" instance=ExtResource("1")]
 position = Vector2(157.282, 588.495)
 
 [node name="Tree3" parent="Node2D" instance=ExtResource("1")]
 modulate = Color(0.517647, 0.188235, 0.85098, 1)
-position = Vector2(528.337, 553.168)
+position = Vector2(528, 553)
 rotation = 3.14159
 scale = Vector2(0.623856, -0.571663)
 
