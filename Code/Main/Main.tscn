@@ -1,175 +1,159 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://cvqtg6ss3dcl4"]
 
-[ext_resource path="res://Props/Tree/Tree.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Props/Tower.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Main/Main.gd" type="Script" id=3]
-[ext_resource path="res://Sprites/Circle.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/trapezoid.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Triangle.png" type="Texture" id=6]
-[ext_resource path="res://Main/Textures/elite_navigator.png" type="Texture" id=7]
+[ext_resource type="PackedScene" path="res://Props/Tree/Tree.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://fapvtrw6ahl6" path="res://Props/Tower.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://dqqnk62vpp4rw" path="res://Sprites/Circle.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ct8qiebaw2vui" path="res://Sprites/trapezoid.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://7w2ecdsoydw" path="res://Sprites/Triangle.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://c6dvg3i5ay63x" path="res://Main/Textures/elite_navigator.png" id="7"]
 
 [node name="Main" type="Node"]
-script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 0.222717
-margin_right = 0.222656
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-__meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Control"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -116.535
-margin_top = 12.7136
-margin_right = -9.53516
-margin_bottom = 44.7136
-mouse_default_cursor_shape = 2
-text = "Pause Menu"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.290196, 0.196078, 0.254902, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.290196, 0.196078, 0.254902, 1)
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="BG" type="Sprite" parent="Node2D"]
-position = Vector2( 332.156, 360.156 )
+[node name="BG" type="Sprite2D" parent="Node2D"]
+position = Vector2(332.156, 360.156)
 rotation = -1.48867
-scale = Vector2( 0.695822, 0.695822 )
-texture = ExtResource( 7 )
+scale = Vector2(0.695822, 0.695822)
+texture = ExtResource("7")
 
-[node name="Moon" type="Sprite" parent="Node2D"]
-modulate = Color( 0.831373, 0.85098, 0.654902, 1 )
-position = Vector2( 277.517, 222.194 )
-scale = Vector2( 0.210029, 0.210029 )
-texture = ExtResource( 4 )
+[node name="Moon" type="Sprite2D" parent="Node2D"]
+modulate = Color(0.831373, 0.85098, 0.654902, 1)
+position = Vector2(277.517, 222.194)
+scale = Vector2(0.210029, 0.210029)
+texture = ExtResource("4")
 
 [node name="Mountains" type="Node2D" parent="Node2D"]
 
-[node name="Triangle" type="Sprite" parent="Node2D/Mountains"]
-modulate = Color( 0.592157, 0.239216, 0.639216, 1 )
-position = Vector2( 422.474, 285.126 )
+[node name="Triangle" type="Sprite2D" parent="Node2D/Mountains"]
+modulate = Color(0.592157, 0.239216, 0.639216, 1)
+position = Vector2(422.474, 285.126)
 rotation = -0.0379506
-scale = Vector2( 1.31072, 0.871685 )
-texture = ExtResource( 6 )
+scale = Vector2(1.31072, 0.871685)
+texture = ExtResource("6")
 
-[node name="Triangle2" type="Sprite" parent="Node2D/Mountains"]
-modulate = Color( 0.545098, 0.133333, 0.603922, 1 )
-position = Vector2( 562.481, 405.334 )
+[node name="Triangle2" type="Sprite2D" parent="Node2D/Mountains"]
+modulate = Color(0.545098, 0.133333, 0.603922, 1)
+position = Vector2(562.481, 405.334)
 rotation = 0.0599874
-scale = Vector2( 1.31072, 0.871685 )
-texture = ExtResource( 6 )
+scale = Vector2(1.31072, 0.871685)
+texture = ExtResource("6")
 
-[node name="trapezoid2" type="Sprite" parent="Node2D/Mountains"]
-modulate = Color( 0.486275, 0.113725, 0.443137, 1 )
-position = Vector2( 416.231, 397.207 )
+[node name="trapezoid2" type="Sprite2D" parent="Node2D/Mountains"]
+modulate = Color(0.486275, 0.113725, 0.443137, 1)
+position = Vector2(416.231, 397.207)
 rotation = -2.04867
-scale = Vector2( 0.753722, 0.471851 )
-texture = ExtResource( 5 )
+scale = Vector2(0.753722, 0.471851)
+texture = ExtResource("5")
 
-[node name="trapezoid" type="Sprite" parent="Node2D/Mountains"]
-modulate = Color( 0.396078, 0.0705882, 0.360784, 1 )
-position = Vector2( 614.221, 319.425 )
+[node name="trapezoid" type="Sprite2D" parent="Node2D/Mountains"]
+modulate = Color(0.396078, 0.0705882, 0.360784, 1)
+position = Vector2(614.221, 319.425)
 rotation = 0.0257259
-scale = Vector2( 0.753722, 0.471851 )
-texture = ExtResource( 5 )
+scale = Vector2(0.753722, 0.471851)
+texture = ExtResource("5")
 
-[node name="trapezoid4" type="Sprite" parent="Node2D/Mountains"]
-modulate = Color( 0.396078, 0.0705882, 0.360784, 1 )
-position = Vector2( 182.179, 457.311 )
+[node name="trapezoid4" type="Sprite2D" parent="Node2D/Mountains"]
+modulate = Color(0.396078, 0.0705882, 0.360784, 1)
+position = Vector2(182.179, 457.311)
 rotation = 2.54269
-scale = Vector2( 0.919166, 0.710458 )
-texture = ExtResource( 5 )
+scale = Vector2(0.919166, 0.710458)
+texture = ExtResource("5")
 
-[node name="trapezoid3" type="Sprite" parent="Node2D/Mountains"]
-modulate = Color( 0.486275, 0.113725, 0.443137, 1 )
-position = Vector2( 478.583, 372.897 )
+[node name="trapezoid3" type="Sprite2D" parent="Node2D/Mountains"]
+modulate = Color(0.486275, 0.113725, 0.443137, 1)
+position = Vector2(478.583, 372.897)
 rotation = -2.04867
-scale = Vector2( 0.753722, 0.421526 )
-texture = ExtResource( 5 )
+scale = Vector2(0.753722, 0.421526)
+texture = ExtResource("5")
 
 [node name="Medow" type="Node2D" parent="Node2D"]
 
-[node name="Circle2" type="Sprite" parent="Node2D/Medow"]
-modulate = Color( 0.270588, 0.482353, 0.313726, 1 )
-position = Vector2( 580.159, 476.045 )
+[node name="Circle2" type="Sprite2D" parent="Node2D/Medow"]
+modulate = Color(0.270588, 0.482353, 0.313726, 1)
+position = Vector2(580.159, 476.045)
 rotation = -0.00250772
-scale = Vector2( 1.88057, 0.471851 )
-texture = ExtResource( 4 )
+scale = Vector2(1.88057, 0.471851)
+texture = ExtResource("4")
 
-[node name="Circle3" type="Sprite" parent="Node2D/Medow"]
-modulate = Color( 0.494118, 0.560784, 0.113725, 0.596078 )
-position = Vector2( 413.279, 509.472 )
+[node name="Circle3" type="Sprite2D" parent="Node2D/Medow"]
+modulate = Color(0.494118, 0.560784, 0.113725, 0.596078)
+position = Vector2(413.279, 509.472)
 rotation = -0.00250772
-scale = Vector2( 1.67051, 0.419143 )
-texture = ExtResource( 4 )
+scale = Vector2(1.67051, 0.419143)
+texture = ExtResource("4")
 
-[node name="Circle4" type="Sprite" parent="Node2D/Medow"]
-modulate = Color( 0.364706, 0.580392, 0.215686, 0.596078 )
-position = Vector2( 758.347, 558.97 )
+[node name="Circle4" type="Sprite2D" parent="Node2D/Medow"]
+modulate = Color(0.364706, 0.580392, 0.215686, 0.596078)
+position = Vector2(758.347, 558.97)
 rotation = -0.00250772
-scale = Vector2( 1.67051, 0.419143 )
-texture = ExtResource( 4 )
+scale = Vector2(1.67051, 0.419143)
+texture = ExtResource("4")
 
-[node name="Circle5" type="Sprite" parent="Node2D/Medow"]
-modulate = Color( 0.168627, 0.478431, 0.188235, 0.803922 )
-position = Vector2( 310.041, 604.224 )
+[node name="Circle5" type="Sprite2D" parent="Node2D/Medow"]
+modulate = Color(0.168627, 0.478431, 0.188235, 0.803922)
+position = Vector2(310.041, 604.224)
 rotation = -0.00250772
-scale = Vector2( 1.67051, 0.419143 )
-texture = ExtResource( 4 )
+scale = Vector2(1.67051, 0.419143)
+texture = ExtResource("4")
 
-[node name="RoamingTower" parent="Node2D" instance=ExtResource( 2 )]
-modulate = Color( 0.388235, 0.662745, 0.67451, 1 )
-position = Vector2( 216.856, 485.46 )
-scale = Vector2( -0.22, 0.22 )
+[node name="RoamingTower" parent="Node2D" instance=ExtResource("2")]
+modulate = Color(0.388235, 0.662745, 0.67451, 1)
+position = Vector2(216.856, 485.46)
+scale = Vector2(-0.22, 0.22)
 
-[node name="Tree" parent="Node2D" instance=ExtResource( 1 )]
-position = Vector2( 157.282, 588.495 )
+[node name="Tree" parent="Node2D" instance=ExtResource("1")]
+position = Vector2(157.282, 588.495)
 
-[node name="Tree3" parent="Node2D" instance=ExtResource( 1 )]
-modulate = Color( 0.517647, 0.188235, 0.85098, 1 )
-position = Vector2( 528.337, 553.168 )
+[node name="Tree3" parent="Node2D" instance=ExtResource("1")]
+modulate = Color(0.517647, 0.188235, 0.85098, 1)
+position = Vector2(528.337, 553.168)
 rotation = 3.14159
-scale = Vector2( 0.623856, -0.571663 )
+scale = Vector2(0.623856, -0.571663)
 
-[node name="Tree2" parent="Node2D" instance=ExtResource( 1 )]
-modulate = Color( 0.764706, 0.454902, 0.454902, 1 )
-position = Vector2( 880.924, 593.766 )
-scale = Vector2( 0.793921, 0.712574 )
+[node name="Tree2" parent="Node2D" instance=ExtResource("1")]
+modulate = Color(0.764706, 0.454902, 0.454902, 1)
+position = Vector2(880.924, 593.766)
+scale = Vector2(0.793921, 0.712574)
 
-[node name="ForeTower" parent="Node2D" instance=ExtResource( 2 )]
-modulate = Color( 0.87451, 0.654902, 0.654902, 1 )
-position = Vector2( 751.919, 611.156 )
+[node name="ForeTower" parent="Node2D" instance=ExtResource("2")]
+modulate = Color(0.87451, 0.654902, 0.654902, 1)
+position = Vector2(751.919, 611.156)
 
 [node name="Cloud" type="Node2D" parent="Node2D"]
 
-[node name="Circle" type="Sprite" parent="Node2D/Cloud"]
-modulate = Color( 0.662745, 0.662745, 0.662745, 0.313726 )
-position = Vector2( 840.374, 104.814 )
-scale = Vector2( 1, 0.127165 )
-texture = ExtResource( 4 )
+[node name="Circle" type="Sprite2D" parent="Node2D/Cloud"]
+modulate = Color(0.662745, 0.662745, 0.662745, 0.313726)
+position = Vector2(840.374, 104.814)
+scale = Vector2(1, 0.127165)
+texture = ExtResource("4")
 
-[node name="Circle2" type="Sprite" parent="Node2D/Cloud"]
-modulate = Color( 0.662745, 0.662745, 0.662745, 0.313726 )
-position = Vector2( 727.237, 89.2578 )
-scale = Vector2( 1, 0.127165 )
-texture = ExtResource( 4 )
+[node name="Circle2" type="Sprite2D" parent="Node2D/Cloud"]
+modulate = Color(0.662745, 0.662745, 0.662745, 0.313726)
+position = Vector2(727.237, 89.2578)
+scale = Vector2(1, 0.127165)
+texture = ExtResource("4")
 
-[node name="Circle3" type="Sprite" parent="Node2D/Cloud"]
-modulate = Color( 0.662745, 0.662745, 0.662745, 0.313726 )
-position = Vector2( 802.19, 70.873 )
-scale = Vector2( 1.11049, 0.19898 )
-texture = ExtResource( 4 )
+[node name="Circle3" type="Sprite2D" parent="Node2D/Cloud"]
+modulate = Color(0.662745, 0.662745, 0.662745, 0.313726)
+position = Vector2(802.19, 70.873)
+scale = Vector2(1.11049, 0.19898)
+texture = ExtResource("4")
