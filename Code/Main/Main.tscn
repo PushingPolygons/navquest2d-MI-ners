@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://7w2ecdsoydw" path="res://Sprites/Triangle.png" id="6"]
 [ext_resource type="Texture2D" uid="uid://c6dvg3i5ay63x" path="res://Main/Textures/elite_navigator.png" id="7"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node"]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
